@@ -10,120 +10,144 @@ function annoletContainer(){
     var linktag = document.createElement('link');
     linktag.rel = "stylesheet";
     linktag.type = "text/css";
-    linktag.href = "https://cdn.rawgit.com/sadhanareddy/page-renarration-bookmarklet/360a1042/css/page_renarration.css"; 
+    linktag.href = "https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/pagexform-annolet.css"; 
     document.getElementsByTagName('head')[0].appendChild(linktag);
 
-    //injecting html code
-    container.innerHTML = "<h4 id='annolet-header'>Renarration</h4>"+
-    "<ul id='annolet-tools-menu' >"+
-        "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
-            "<button id='disable-css' class='annolet-menu-sub-item' >No CSS</button>"+
-        "</li>"+
-        "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
-            "<button id='zapper' class='annolet-menu-sub-item' >Zapper</button>"+
-        "</li>"+
-        "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
-            "<button id='modify-content' class='annolet-menu-sub-item' >Modify Content</button>"+
-        "</li>"+
-        "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
-            "<button id='highlighter-btn' class='annolet-menu-sub-item' >Highlighter</button>"+
-        "</li>"+
-        "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
-            "<button id='phonetics-btn' class='annolet-menu-sub-item' >Phonetics</button>"+
-        "</li>"+
-        "<li class='annolet-menu-item'>"+
-            "<button id='trans-text' class='annolet-menu-sub-item' >Translate Text</button>"+"<br>"+
-            "<select class='select-tools-menu' id='select-from-lang'>"+
-                "<option value='en' >English</option>"+
-                "<option value='hi' >Hindi</option>"+
-                "<option value='te' >Telugu</option>"+
-                "<option value='ta' >Tamil</option>"+
-                "<option value='ml' >Malayalam</option>"+
-                "<option value='ja' >Japanese</option>"+
-                "<option value='zh' >Chinese</option>"+
-            "</select>"+
-            "<select class='select-tools-menu' id='select-to-lang'>"+
-                "<option value='en' >English</option>"+
-                "<option value='hi' >Hindi</option>"+
-                "<option value='te' >Telugu</option>"+
-                "<option value='ta' >Tamil</option>"+
-                "<option value='ml' >Malayalam</option>"+
-                "<option value='ja' >Japanese</option>"+
-                "<option value='zh' >Chinese</option>"+
-            "</select>"+
-        "</li>"+
-        "<li class='annolet-menu-item'>"+
-            "<button id='change-theme' class='annolet-menu-sub-item'>Switch CSS</button>"+"<br>"+
-            "<select class='select-tools-menu' id='select-theme'>"+
-                "<option value='switch1' >Theme1</option>"+
-                "<option value='switch2' >Theme2</option>"+
-                "<option value='switch3' >Theme3</option>"+
-            "</select>"+
-        "</li>"+
-        "<li class='annolet-menu-item'>"+
-            "<button id='change-content' class='annolet-menu-sub-item' >Page Stripper</button>"+"<br>"+
-            "<select class='select-tools-menu' id='select-content'>"+
-                "<option value='show-links' >Show Links</option>"+
-                "<option value='show-text' >Show Text</option>"+
-                "<option value='show-images' >Show Images</option>"+
-            "</select>"+
-        "</li>"+
-        "<li class='annolet-menu-item'>"+
-            "<button id='change-font' class='annolet-menu-sub-item' >Visibility</button>"+"<br>"+
-            "<select class='select-tools-menu' id='select-font'>"+
-                "<option value='increase-font' >Increase Font</option>"+
-                "<option value='decrease-font' >Decrease Font</option>"+
-            "</select>"+
-        "</li>"+
-        "<li class='annolet-menu-item'>"+
-            "<button id='change-currency' class='annolet-menu-sub-item' >Convert Currency</button>"+"<br>"+
-            "<select class='select-tools-menu' id='select-from-currency'>"+
-                "<option value='USD' >USD</option>"+
-                "<option value='INR' >INR</option>"+
-                "<option value='EUR' >EUR</option>"+
-            "</select>"+
-            "<select class='select-tools-menu' id='select-to-currency'>"+
-                "<option value='USD' >USD</option>"+
-                "<option value='INR' >INR</option>"+
-                "<option value='EUR' >EUR</option>"+
-            "</select>"+
-        "</li>"+
-        "<li class='annolet-menu-item'>"+
-            "<button id='change-measurement' class='annolet-menu-sub-item' >Convert Measurements</button>"+"<br>"+
-            "<select class='select-tools-menu' id='select-from-measure'>"+
-                "<option value='km'>kilometers</option>"+
-                "<option value='cm'>centimeters</option>"+
-                "<option value='miles'>Miles</option>"+
-            "</select>"+
-            "<select class='select-tools-menu' id='select-to-measure'>"+
-                "<option value='miles'>Miles</option>"+
-                "<option value='inches'>inches</option>"+
-                "<option value='km'>kilometers</option>"+
-            "</select>"+
-        "</li>"+
-    	"<li class='annolet-menu-item'>"+
-            "<button id='change-num-sys' class='annolet-menu-sub-item' >Convert Num sys</button>"+"<br>"+
-            "<select class='select-tools-menu' id='select-num-sys'>"+
-                "<option value='en-IN' >Indian</option>"+
-                "<option value='en-US' >US</option>"+
-    	        "<option value='en-GB'>British</option>"+
-    	        "<option value='ko-KR'>Korean</option>"+
-    	        "<option value='ar-EG'>Arabic</option>"+
-            "</select>"+
-    	"</li>"+
-        "<li class='annolet-menu-item'>"+
-            "<button id='change-date-format' class='annolet-menu-sub-item' >Date Format</button>"+"<br>"+
-            "<select class='select-tools-menu' id='select-date-format'>"+
-                "<option value='en-IN' >Indian</option>"+
-                "<option value='en-US' >US</option>"+
-                "<option value='en-GB'>British</option>"+
-                "<option value='ko-KR'>Korean</option>"+
-                "<option value='ar-EG'>Arabic</option>"+
-            "</select>"+
-        "</li>"+
-    "</ul>";
+    //appending a CSS stylesheet to head element of a webpage, which is used to stylize the annolet container.
+    // var script = document.createElement('script');
+    // script.type = "text/javascript";
+    // script.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"; 
+    // document.getElementsByTagName('head')[0].appendChild(script);
 
+    //injecting html code
+    // container.innerHTML = "<h4 id='annolet-header'>Renarration</h4>"+
+    // "<ul id='annolet-tools-menu' >"+
+    //     "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
+    //         "<button id='disable-css' class='annolet-menu-sub-item' >No CSS</button>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
+    //         "<button id='zapper' class='annolet-menu-sub-item' >Zapper</button>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
+    //         "<button id='modify-content' class='annolet-menu-sub-item' >Modify Content</button>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
+    //         "<button id='highlighter-btn' class='annolet-menu-sub-item' >Highlighter</button>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item' style='position:relative;top:-25px'>"+
+    //         "<button id='phonetics-btn' class='annolet-menu-sub-item' >Phonetics</button>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item'>"+
+    //         "<button id='trans-text' class='annolet-menu-sub-item' >Translate Text</button>"+"<br>"+
+    //         "<select class='select-tools-menu' id='select-from-lang'>"+
+    //             "<option value='en' >English</option>"+
+    //             "<option value='hi' >Hindi</option>"+
+    //             "<option value='te' >Telugu</option>"+
+    //             "<option value='ta' >Tamil</option>"+
+    //             "<option value='ml' >Malayalam</option>"+
+    //             "<option value='ja' >Japanese</option>"+
+    //             "<option value='zh' >Chinese</option>"+
+    //         "</select>"+
+    //         "<select class='select-tools-menu' id='select-to-lang'>"+
+    //             "<option value='zh' >Chinese</option>"+
+    //             "<option value='ja' >Japanese</option>"+
+    //             "<option value='ml' >Malayalam</option>"+
+    //             "<option value='ta' >Tamil</option>"+
+    //             "<option value='te' >Telugu</option>"+
+    //             "<option value='hi' >Hindi</option>"+
+    //             "<option value='en' >English</option>"+
+    //         "</select>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item'>"+
+    //         "<button id='change-theme' class='annolet-menu-sub-item'>Switch CSS</button>"+"<br>"+
+    //         "<select class='select-tools-menu' id='select-theme'>"+
+    //             "<option value='switch1' >Theme1</option>"+
+    //             "<option value='switch2' >Theme2</option>"+
+    //             "<option value='switch3' >Theme3</option>"+
+    //         "</select>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item'>"+
+    //         "<button id='change-content' class='annolet-menu-sub-item' >Page Stripper</button>"+"<br>"+
+    //         "<select class='select-tools-menu' id='select-content'>"+
+    //             "<option value='show-links' >Show Links</option>"+
+    //             "<option value='show-text' >Show Text</option>"+
+    //             "<option value='show-images' >Show Images</option>"+
+    //         "</select>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item'>"+
+    //         "<button id='change-font' class='annolet-menu-sub-item' >Visibility</button>"+"<br>"+
+    //         "<select class='select-tools-menu' id='select-font'>"+
+    //             "<option value='increase-font' >Increase Font</option>"+
+    //             "<option value='decrease-font' >Decrease Font</option>"+
+    //         "</select>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item'>"+
+    //         "<button id='change-currency' class='annolet-menu-sub-item' >Convert Currency</button>"+"<br>"+
+    //         "<select class='select-tools-menu' id='select-from-currency'>"+
+    //             "<option value='USD' >USD</option>"+
+    //             "<option value='INR' >INR</option>"+
+    //             "<option value='EUR' >EUR</option>"+
+    //         "</select>"+
+    //         "<select class='select-tools-menu' id='select-to-currency'>"+
+    //             "<option value='INR' >INR</option>"+
+    //             "<option value='USD' >USD</option>"+
+    //             "<option value='EUR' >EUR</option>"+
+    //         "</select>"+
+    //     "</li>"+
+    //     "<li class='annolet-menu-item'>"+
+    //         "<button id='change-measurement' class='annolet-menu-sub-item' >Convert Measurements</button>"+"<br>"+
+    //         "<select class='select-tools-menu' id='select-from-measure'>"+
+    //             "<option value='km'>kilometers</option>"+
+    //             "<option value='mi'>Miles</option>"+
+    //             "<option value='ft'>foot</option>"+
+    //         "</select>"+
+    //         "<select class='select-tools-menu' id='select-to-measure'>"+
+    //             "<option value='mi'>Miles</option>"+
+    //             "<option value='km'>kilometers</option>"+
+    //             "<option value='ft'>foot</option>"+
+    //         "</select>"+
+    //     "</li>"+
+    // 	"<li class='annolet-menu-item'>"+
+    //         "<button id='change-num-sys' class='annolet-menu-sub-item' >Convert Num sys</button>"+"<br>"+
+    //         "<select class='select-tools-menu' id='select-num-sys'>"+
+    //             "<option value='en-IN' >Indian</option>"+
+    //             "<option value='en-US' >US</option>"+
+    // 	        "<option value='en-GB'>British</option>"+
+    // 	        "<option value='ko-KR'>Korean</option>"+
+    // 	        "<option value='ar-EG'>Arabic</option>"+
+    //         "</select>"+
+    // 	"</li>"+
+    //     "<li class='annolet-menu-item'>"+
+    //         "<button id='change-date-format' class='annolet-menu-sub-item' >Date Format</button>"+"<br>"+
+    //         "<select class='select-tools-menu' id='select-date-format'>"+
+    //             "<option value='en-IN' >Indian</option>"+
+    //             "<option value='en-US' >US</option>"+
+    //             "<option value='en-GB'>British</option>"+
+    //             "<option value='ko-KR'>Korean</option>"+
+    //             "<option value='ar-EG'>Arabic</option>"+
+    //         "</select>"+
+    //     "</li>"+
+    // "</ul>";
 }
+
+$(document).ready(function() {
+    $("body").load(function() {
+        $.ajax({
+            url : "pagexform-annolet.txt",
+            dataType: "text",
+            success : function (data) {
+                $("#annolet-container").html(data);
+            }
+        });
+    });
+}); 
+
+// var jsonData = {};
+// var $j = jQuery.noConflict();
+// $j.getJSON('config.json',function(data){
+//     alert(JSON.stringify(data));
+//     jsonData = data;
+// });
 
 // Function to disable all links on a webpage.
 function disableLinks(){
@@ -138,7 +162,7 @@ function disableLinks(){
 function disableCss(){
     var styleSheets = document.styleSheets;
     for ( var i=0; i<styleSheets.length; i++) {
-        if(styleSheets[i].href == 'https://cdn.rawgit.com/sadhanareddy/page-renarration-bookmarklet/360a1042/css/page_renarration.css'){
+        if(styleSheets[i].href == 'https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/pagexform-annolet.css'){
            styleSheets[i].disabled = false;
         }
         else{
@@ -248,9 +272,9 @@ function alternateStylesheets(){
     //appending a CSS alternate stylesheets to head element of a webpage.
     var i= 0;
     var style_sheets = 3; 
-    var css_themes =['https://cdn.rawgit.com/sadhanareddy/page-renarration-bookmarklet/c73b92c5/css/switch1.css',
-    'https://cdn.rawgit.com/sadhanareddy/page-renarration-bookmarklet/c73b92c5/css/switch2.css',
-    'https://cdn.rawgit.com/sadhanareddy/page-renarration-bookmarklet/c73b92c5/css/switch3.css'];
+    var css_themes =['https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/switch1.css',
+    'https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/switch2.css',
+    'https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/switch3.css'];
     var link_title =['switch1', 'switch2', 'switch3'];
 
     for(i=0; i<style_sheets; i++){
@@ -341,101 +365,76 @@ function changeFont(){
     }
 }
 
-// Function to convert the currency 
+//Function to convert the currency 
 function convertCurrency(){
     if (window.getSelection) 
     {
-        var amount= window.getSelection().toString();
-        amount = amount.replace (/,/g, "");
+        var selected_text = window.getSelection().toString();
+        var remove_splchar =  selected_text.replace(/\,/g,"");
+        var cur_amount =  parseFloat(remove_splchar);
     } 
     else if (document.selection && document.selection.type != "Control") {
-        var amount = document.selection.createRange().text;
-        amount = amount.replace (/,/g, "");
+        var selected_text = document.selection.createRange().text;
+        var remove_splchar =  selected_text.replace(/\,/g,"");
+        var cur_amount =  parseFloat(remove_splchar);
     }
-    var from_cur = document.getElementById("select-from-currency").value;
-    var to_cur = document.getElementById("select-to-currency").value;
+    var from_cur = document.getElementById('select-from-currency').value;
+    var to_cur = document.getElementById('select-to-currency').value;
+
     var url = "//localhost:5000/currency-conversion"
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-    xhr.send(JSON.stringify({"amount": amount, "from_cur":from_cur, "to_cur":to_cur }));
-    xhr.onreadystatechange = function() {
-        if (this.readyState==4 && this.status==200) {
-            var res = this.responseText;
-            res1 = JSON.parse(res);
-            var currency_res = res1["result"];
+    xhr.send(JSON.stringify({ "cur_amount":cur_amount, "from_cur":from_cur, "to_cur":to_cur }));
+    xhr.onreadystatechange = processRequest;
+    function processRequest(e)
+    {
+        if (xhr.readyState == 4)
+        {
+            var cur_res = xhr.responseText;
             var parent = $(window.getSelection().focusNode.parentElement);
             var oldHtml = parent.html();
-            var newHtml = oldHtml.replace(amount, "<span class='highlight' style='color:green'>"+currency_res+"</span>");
+            var newHtml = oldHtml.replace(selected_text, "<span class='highlight' style='color:green'>"+cur_res+"</span>");
             parent.html( newHtml );
         }
     }
-    // if (window.getSelection) 
-    // {
-    //     var amount = window.getSelection().toString();
-    //     var cur_amount =  parseFloat(amount);
-    //     alert(cur_amount);
-    //     console.log(cur_amount);
-    // } 
-    // else if (document.selection && document.selection.type != "Control") {
-    //     var amount = document.selection.createRange().text;
-    //     var cur_amount =  parseFloat(amount);
-    //     alert(cur_amount);
-    //     console.log(cur_amount);
-    // }
-    // var select_from_currency = document.getElementById('select-from-currency').value;
-    // var select_to_currency = document.getElementById('select-to-currency').value;
-    // if(select_from_currency == "USD" && select_to_currency == 'INR'){
-    //     var INR = cur_amount;
-    //     alert(INR);
-    //     if (!isNaN(INR)){
-    //         cur_res = INR * 64.74;
-    //         alert("ssdfds");
-    //         alert(cur_res);
-    //     }
-    // }
-    
-    // var parent = $(window.getSelection().focusNode.parentElement);
-    // var oldHtml = parent.html();
-    // var newHtml = oldHtml.replace(number, "<span class='highlight' style='color:green'>"+cur_res+"</span>");
-    // parent.html( newHtml );
 }
 
+//Function to convert units of measurements
 function changeMeasurement() {
    if (window.getSelection) 
     {
-        var number = window.getSelection().toString();
-        var measurement_num =  parseFloat(number);
+        var selected_text = window.getSelection().toString();
+        var remove_splchar =  selected_text.replace(/\,/g,"");
+        var measurement_num =  parseFloat(remove_splchar);
     } 
     else if (document.selection && document.selection.type != "Control") {
-        var number = document.selection.createRange().text;
-        var measurement_num =  parseFloat(number);
+        var selected_text = document.selection.createRange().text;
+        var remove_splchar =  selected_text.replace(/\,/g,"");
+        var measurement_num =  parseFloat(remove_splchar);
     }
-    var select_from_measure = document.getElementById('select-from-measure').value;
-    var select_to_measure = document.getElementById('select-to-measure').value;
-    if(select_from_measure == "cm" && select_to_measure == 'inches'){
-        var inch = measurement_num;
-        if (!isNaN(inch)){
-            measurement_res = inch * 0.393701;
+    var from_measure = document.getElementById('select-from-measure').value;
+    var to_measure = document.getElementById('select-to-measure').value;
+
+    var url = "//localhost:5000/measurement-conversion"
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+    xhr.send(JSON.stringify({ "measurement_num":measurement_num, "from_measure":from_measure, "to_measure":to_measure }));
+    xhr.onreadystatechange = processRequest;
+    function processRequest(e)
+    {
+        if (xhr.readyState == 4)
+        {
+            var measurement_res = xhr.responseText;
+            var parent = $(window.getSelection().focusNode.parentElement);
+            var oldHtml = parent.html();
+            var newHtml = oldHtml.replace(selected_text, "<span class='highlight' style='color:green'>"+measurement_res+"</span>");
+            parent.html( newHtml );
         }
     }
-    else if(select_from_measure == "km" && select_to_measure == 'miles'){
-        var mi = measurement_num;
-        if (!isNaN(mi)){
-            measurement_res = mi * 0.621371192;
-        }
-    }
-    else if(select_from_measure == "miles" && select_to_measure == 'km'){
-        var km = measurement_num;
-        if (!isNaN(km)) {
-            measurement_res = km * 1.609344;
-        }
-    }
-    var parent = $(window.getSelection().focusNode.parentElement);
-    var oldHtml = parent.html();
-    var newHtml = oldHtml.replace(number, "<span class='highlight' style='color:green'>"+measurement_res+"</span>");
-    parent.html( newHtml );
 }
 
 //Function to convert the number in preferred number system.
@@ -456,6 +455,7 @@ function convertNumsys(){
     var parent = $(window.getSelection().focusNode.parentElement);
     var oldHtml = parent.html();
     var newHtml = oldHtml.replace(number, "<span class='highlight' style='color:green'>"+converted_num+"</span>");
+    alert(newHtml);
     parent.html( newHtml );
 }
 

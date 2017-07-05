@@ -131,8 +131,9 @@ function annoletContainer(){
 }
 
 var jsonData = {};
-$.getJSON('https://cdn.rawgit.com/sadhanareddy/pageXform-Bookmarklet/02d85d67/config.json',function(data){
-    alert(JSON.stringify(data));
+console.log(jsonData);
+$.getJSON('https://cdn.rawgit.com/sadhanareddy/pageXform-Bookmarklet/1a2ebdaa/config.json',function(data){
+    //alert(JSON.stringify(data));
     jsonData = data;
 });
 

@@ -10,7 +10,7 @@ function annoletContainer(){
     var linktag = document.createElement('link');
     linktag.rel = "stylesheet";
     linktag.type = "text/css";
-    linktag.href = "https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/pagexform-annolet.css"; 
+    linktag.href = jsonData["rawgit_urls"]["pagexform_annolet_css"]; 
     document.getElementsByTagName('head')[0].appendChild(linktag);
 
     //appending a CSS stylesheet to head element of a webpage, which is used to stylize the annolet container.
@@ -132,13 +132,13 @@ function annoletContainer(){
 
 var jsonData = {};
 console.log(jsonData);
-$.getJSON('https://cdn.rawgit.com/sadhanareddy/pageXform-Bookmarklet/1a2ebdaa/config.json',function(data){
+$.getJSON('https://cdn.rawgit.com/sadhanareddy/pageXform-Bookmarklet/594d00a2/config.json',function(data){
     jsonData = data;
 });
 
 function loadHtml(){
     $.ajax({
-        url : jsonData["pagexform_annolet_txt"],
+        url : jsonData["rawgit_urls"]["pagexform_annolet_txt"];,
         dataType: "text",
         success : function (data) {
             $("#annolet-container").html(data);

@@ -523,8 +523,8 @@ function addClickevents(){
 
 window.onload = function() {
     annoletContainer()
+    loadHtml()
     disableLinks()
     addClickevents()
-    loadHtml()
 };
     

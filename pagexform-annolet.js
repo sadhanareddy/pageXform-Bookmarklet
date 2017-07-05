@@ -14,10 +14,10 @@ function annoletContainer(){
     document.getElementsByTagName('head')[0].appendChild(linktag);
 
     //appending a CSS stylesheet to head element of a webpage, which is used to stylize the annolet container.
-    // var script = document.createElement('script');
-    // script.type = "text/javascript";
-    // script.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"; 
-    // document.getElementsByTagName('head')[0].appendChild(script);
+    var script = document.createElement('script');
+    script.type = "text/javascript";
+    script.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"; 
+    document.getElementsByTagName('head')[0].appendChild(script);
 
     //injecting html code
     // container.innerHTML = "<h4 id='annolet-header'>Renarration</h4>"+
@@ -130,23 +130,21 @@ function annoletContainer(){
     // "</ul>";
 }
 
+var jsonData = {};
+$.getJSON('https://cdn.rawgit.com/sadhanareddy/pageXform-Bookmarklet/02d85d67/config.json',function(data){
+    alert(JSON.stringify(data));
+    jsonData = data;
+});
+
 function loadHtml(){
     $.ajax({
-        url : "pagexform-annolet.txt",
+        url : jsonData["pagexform_annolet_txt"],
         dataType: "text",
         success : function (data) {
             $("#annolet-container").html(data);
         }
     });
-}   
-
-
-// var jsonData = {};
-// var $j = jQuery.noConflict();
-// $j.getJSON('config.json',function(data){
-//     alert(JSON.stringify(data));
-//     jsonData = data;
-// });
+}
 
 // Function to disable all links on a webpage.
 function disableLinks(){

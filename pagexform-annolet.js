@@ -130,17 +130,16 @@ function annoletContainer(){
     // "</ul>";
 }
 
-$(document).ready(function() {
-    $("body").load(function() {
-        $.ajax({
-            url : "pagexform-annolet.txt",
-            dataType: "text",
-            success : function (data) {
-                $("#annolet-container").html(data);
-            }
-        });
+function loadHtml(){
+    $.ajax({
+        url : "pagexform-annolet.txt",
+        dataType: "text",
+        success : function (data) {
+            $("#annolet-container").html(data);
+        }
     });
-}); 
+}   
+
 
 // var jsonData = {};
 // var $j = jQuery.noConflict();
@@ -526,5 +525,6 @@ window.onload = function() {
     annoletContainer()
     disableLinks()
     addClickevents()
+    loadHtml()
 };
     

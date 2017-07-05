@@ -133,7 +133,6 @@ function annoletContainer(){
 var jsonData = {};
 console.log(jsonData);
 $.getJSON('https://cdn.rawgit.com/sadhanareddy/pageXform-Bookmarklet/1a2ebdaa/config.json',function(data){
-    //alert(JSON.stringify(data));
     jsonData = data;
 });
 
@@ -160,7 +159,7 @@ function disableLinks(){
 function disableCss(){
     var styleSheets = document.styleSheets;
     for ( var i=0; i<styleSheets.length; i++) {
-        if(styleSheets[i].href == 'https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/pagexform-annolet.css'){
+        if(styleSheets[i].href == jsonData["pagexform_annolet_css"]){
            styleSheets[i].disabled = false;
         }
         else{
@@ -270,9 +269,7 @@ function alternateStylesheets(){
     //appending a CSS alternate stylesheets to head element of a webpage.
     var i= 0;
     var style_sheets = 3; 
-    var css_themes =['https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/switch1.css',
-    'https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/switch2.css',
-    'https://rawgit.com/sadhanareddy/pageXform-Bookmarklet/master/css/switch3.css'];
+    var css_themes =[jsonData['switch1_css'], jsonData['switch2_css'], jsonData['switch3_css']];
     var link_title =['switch1', 'switch2', 'switch3'];
 
     for(i=0; i<style_sheets; i++){
